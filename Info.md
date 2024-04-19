@@ -44,6 +44,43 @@ Por lo que mientras uno ejecuta la instrucción el otro se adelanta y busca la s
 Las instrucciones que se deben ejecutar a continuación se almacenan en una memoria interna muy rápida a la que se llama **cola de instrucciones**. Lo que permite que la EU posea tapidamente la siguiente instrucción.
 También se puede tener mas unidades de ejecución.
 
+# William Stallings
+
+**Arquitectura de la Computadora** son las características a las que posee acceso el programador, y afectan la ejecución del programa, también se le llama **Set de Instrucciones de la Arquitectura (ISA)**.
+**Organización de la Computadora** hace referencia a los elementos de la computadora y como se interconectan entre ellos, esto da las especificaciones de la arquitectura.
+
+## ARM
+La arquitectura ARM viene de los principios de diseño RISC. Su set de instrucciones fue diseñado para tener una implementación y ejecución eficiente. Todas las instrucciones son de 32bits.
+Thumb es un subconjunto de instrucciones ARM recodificada para instrucciones de 16bits, diseñado para aumentar el rendimiento de implementaciones ARM con bus de 16bits o menos.
+
+### Cortex
+es una familia de arquitectura de microprocesadores ARM. Hay tres tipos de arquitectura Cortex:
+- Cortex A: son de procesadores de aplicación. Y poseen soporte de "memory managment unit MMU" que es necesario para sistemas operativos moviles.
+- Cortex R: son para aplicaciones de tiempo real, es decir se necesita una respuesta rápida ante los eventos. Tiene un tiempo de respuesta muy bajo. La mayoria no tiene MMU, pero poseen "Memory Protection Unit MPU" que es un modulo de hardware que evita que un programa acceda sin querer a la memoria asignada para otro programa.
+- Cortex M: fueron desarrollados para microcontroladores, poseen MPU y no MMU. Solo usan el set de instrucciones thumb solamente. Hay siete versiones de esta:
+	1. Cortex-M0: diseñada para aplicaciones de 8 y 16 bits. Se caracteriza por su bajo costo, bajo consumo y simplicidad
+	2. Cortex-M0+: es una mejora del anterior en cuanto a eficiencia energética.
+	3. Cortex-M3 : diseñada para aplicaciones de 16 y 32 bits, se centra en el rendimiento y eficiencia energetica. Posee funciones de debug y seguimiento.
+	4. Cortex-M4: tiene todo lo que posee el anterior, pero tiene instrucciones que soportan el procesamiento digital de señales.
+	5. Cortex-M7: tiene mejor rendimiento que el M4, es de 32bits pero posee buses e instrucciones de 64bits.
+	6. Cortex-M23: es parecido a M0+ pero instrucciones de división de enteros.
+	7. Cortex-M33: es como M4 solo que añade caracteristicas de seguridad.
+
+#### Cortex M3
+Posee buses de señal y de instrucciones separadas, es decir es una arquitectura Harvard. El **Nucleo**, parte del procesador Cortex-M2, contiene:
+- Decodificador de instrucciones Thumb
+- ALU que soporta multiplicación y división por hardware.
+- Lógica de Control
+- Interfaces a otros componentes del procesador.
+
+Notar que el termino núcleo y procesador son distintos. El procesador posee mas elementos que el core como:
+- NVIC permite el manejo de instrucciones configurables.
+- ETM un componente de depuración que permite la deconstrucción de una ejecución de programa.
+- Debug acces port (DAP) permite tener un acceso de forma externa a la depuración.
+- SRAM y periféricos.
+- Memory Protection Unit protege datos usados por el sistema operativo de aplicaciones del usuario, evita el acceso a regiones de memoria, permite definir regiones de memoria como de solo lectura y detecta accesos inesperados a la memoria que podrían romper el sistema.
+
+
 # Terminología de Interés
 **Assembler  o Ensamblador** es el encargado de llevar un programa escrito en lenguaje assembler a lenguaje maquina.
 **Programa Fuente** un programa escrito en un lenguaje distinto al lenguaje maquina. 
