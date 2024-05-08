@@ -5,18 +5,9 @@ Electronica IV - TP - Arquitectura de Computadora
 Ganem Elías
 
 ## Introducción
-Antes de comenzar se indicará a que hacen referencias palabras del lenguaje técnico que hay que conocer antes de introducirse en el tema:
-- **Assembler  o Ensamblador** es el encargado de llevar un programa escrito en lenguaje assembler a lenguaje maquina.
-- **Programa Fuente** un programa escrito en un lenguaje distinto al lenguaje maquina. 
-- **Programa Objeto** es el resultado de la traducción de un programa fuente a lenguaje maquina. 
-- **Compilador** es el que traduce un lenguaje de alto nivel a lenguaje assembler.
-- **Lenguaje Maquina** en este las instrucciones están en binario.
-- **Lenguaje de Alto Nivel** es un leguaje mas parecido al ingles, por enzima del lenguaje assembler .Cada computadora necesita su propio compilador / assembler, de esta forma *el lenguaje de alto* nivel es independiente de la computadora que se desea programar.
-- **Sistema Operativo** es un programa que se encarga de controlar el hardware y permite la interacción de un programa con este.
-> (Floyd)
 
 ### Computadora
-Una computadora esta formada por los siguientes elementos conectados entre sí por 3 *buses* internos:
+Una **computadora** esta formada por los siguientes elementos conectados entre sí por 3 *buses* internos:
 - **CPU**: (Central Proccessing Unit) controla todo lo que hace la computadora, se le llama *procesador*. Este ejecuta instrucciones dadas a través de un *programa* guardado en una memoria.
 - **Memoria** hay de varios tipos, pero los mas básicos son:
 	- **RAM**: (ramdon access memory) es una memoria que se puede escribir y leer, es *volátil* por lo que si se desconecta la computadora de su alimentación se pierde el contenido de esta. Se utiliza para guardar datos
@@ -35,7 +26,7 @@ Además anteriormente se mencionaron unos conceptos que es importante saber a qu
 > (Floyd)
 
 ## Microprocesador
-Es un circuito integrado digital que se programa para realizar operaciones y tomar decisiones con datos. Puede hacer operaciones aritméticas y lógicas. Está formado por 4 partes básicas: *ALU, decodificador de instrucciones, registros y unidad de control*. La forma en la que estas partes están interconectadas se llama **arquitectura de la computadora**, esto determina las instrucciones y como se ejecución. A continuacion se explica cada una de las partes basicas:
+Hay que diferenciar ente un microcontolador y un micropocesador que es un circuito integrado digital que se programa para realizar operaciones y tomar decisiones con datos. Puede hacer operaciones aritméticas y lógicas. Está formado por 4 partes básicas: *ALU, decodificador de instrucciones, registros y unidad de control*. La forma en la que estas partes están interconectadas se llama **arquitectura de la computadora**, esto determina las instrucciones y como se ejecución. A continuacion se explica cada una de las partes basicas:
 - ALU: Esta se encarga de realizar las operaciones aritméticas y lógicas con los datos que obtiene de los registros.
 - Decodificador de Instrucciones: Se encarga de traducir las instrucciones que están en la memoria para saber que debe hacer el microprocesador.
 - Registros: Los registros forman una matriz que contiene datos e instrucciones, a los cuales la ALU puede acceder rápidamente. Hay tres tipos de registros:
@@ -149,6 +140,16 @@ La funcion de la arquitectura es brindar al programador los conocimientos y herr
 
 Antes de elegir una arquitectura se debería ver que es lo que necesito, es decir para que se va a usar el micro y que forma de programar haría más eficiente el trabajo a partide de esto se elegirá la arquitectura que más se adapte a estas necesidades.
 
+## Terminología de Interés
+Antes de comenzar se indicará a que hacen referencias palabras del lenguaje técnico que hay que conocer antes de introducirse en el tema:
+- **Assembler  o Ensamblador** es el encargado de llevar un programa escrito en lenguaje assembler a lenguaje maquina.
+- **Programa Fuente** un programa escrito en un lenguaje distinto al lenguaje maquina. 
+- **Programa Objeto** es el resultado de la traducción de un programa fuente a lenguaje maquina. 
+- **Compilador** es el que traduce un lenguaje de alto nivel a lenguaje assembler.
+- **Lenguaje Maquina** en este las instrucciones están en binario.
+- **Lenguaje de Alto Nivel** es un leguaje mas parecido al ingles, por enzima del lenguaje assembler .Cada computadora necesita su propio compilador / assembler, de esta forma *el lenguaje de alto* nivel es independiente de la computadora que se desea programar.
+- **Sistema Operativo** es un programa que se encarga de controlar el hardware y permite la interacción de un programa con este.
+> (Floyd)
 
 ## Bibliografía
 - William Stallings. Computer Organization and Architecture (11th edition). Pearson.
